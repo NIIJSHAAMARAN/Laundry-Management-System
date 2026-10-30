@@ -1,0 +1,8 @@
+:root { --ink:#16324f; --foam:#eef5f8; --soap:#2a8fa8; --rinse:#d7e8ee; }
+body { background: var(--foam); color: var(--ink); font-family: system-ui, "Segoe UI", sans-serif; }
+.navbar-lms { background: var(--ink); }
+.navbar-lms .nav-link, .navbar-lms .navbar-brand { color: #dbe9f0; }
+.navbar-lms .nav-link.active { color: #fff; border-bottom: 2px solid var(--soap); }
+.btn-soap { background: var(--soap); color: #fff; } .btn-soap:hover { background: #217a90; color: #fff; }
+.stage { border-left: 4px solid var(--soap); background: #fff; }
+:focus-visible { outline: 2px solid var(--soap); outline-offset: 2px; }

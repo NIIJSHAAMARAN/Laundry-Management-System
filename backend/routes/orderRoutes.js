@@ -1,0 +1,12 @@
+const r = require('express').Router();
+const c = require('../controllers/orderController');
+const { protect, authorize } = require('../middleware/auth');
+r.use(protect);
+r.get('/pricing', c.priceList);
+r.get('/stats', c.stats);
+r.route('/').get(c.list).post(c.create);
+r.get('/:id', c.get);
+r.patch('/:id/status', c.updateStatus);
+r.patch('/:id/assign', authorize('admin', 'staff'), c.assign);
+r.patch('/:id/pay', authorize('admin', 'staff'), c.pay);
+module.exports = r;
